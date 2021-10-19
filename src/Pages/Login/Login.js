@@ -3,17 +3,18 @@ import { Button, Container, Form, Row } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 import google from "../../images/Google__G__Logo.svg.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
 const Login = () => {
-  const {
-    handleGoogleSignIn,
-    users,
-    signInEmailPassword,
-    getEmail,
-    getPassword,
-    error,
-  } = useAuth();
-  console.log(signInEmailPassword);
+  const history = useHistory();
+  const location = useLocation();
+  const redirect = location?.state?.from;
+  const googleSignIn = () => {
+    handleGoogleSignIn().then((res) => {
+      history.push(redirect);
+    });
+  };
+  const { handleGoogleSignIn, signInEmailPassword, getEmail, getPassword } =
+    useAuth();
   return (
     <div className="login-section">
       <Container>
@@ -53,7 +54,7 @@ const Login = () => {
             </div>
 
             <div className="google-signIn-section">
-              <Button onClick={handleGoogleSignIn}>
+              <Button onClick={googleSignIn}>
                 <img src={google} alt="" /> Google sign In
               </Button>
             </div>

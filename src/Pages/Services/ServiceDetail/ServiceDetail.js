@@ -1,9 +1,9 @@
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./ServiceDetail.css";
 const ServiceDetail = (props) => {
-  const { name, description, img, price } = props.service;
+  const { id, name, description, img, price } = props.service;
 
   return (
     <div>
@@ -17,11 +17,11 @@ const ServiceDetail = (props) => {
               <span>Price</span> : {price}
             </h5>
 
-            <Link to="/login">
+            <NavLink to={`/details/${id}`}>
               <div className="service-detail-btn">
                 <Button>Confirm service</Button>
               </div>
-            </Link>
+            </NavLink>
           </div>
         </Row>
       </Container>
