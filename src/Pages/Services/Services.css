@@ -1,7 +1,15 @@
 .services-section {
+  padding-top: 100px;
+}
+.services-header {
+  padding: 40px 0;
 }
 .services-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+}
+.services-card img {
+  width: 100%;
+  height: 250px;
 }

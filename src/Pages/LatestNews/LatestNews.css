@@ -1,21 +1,8 @@
-.news-section-header {
-  text-align: center;
-  padding: 60px 0 40px 0;
-}
-.news-section-header span {
-  color: #13c5dd;
-}
-.cart {
-  margin: 0 20px;
-}
-
-.cart img {
-  width: 100%;
-  height: 250px;
+.news-section {
+  padding: 100px 0;
 }
 .news-btn {
   text-align: center;
-  padding: 20px 0;
 }
 .news-btn button {
   background: #0ebcd3;
@@ -25,6 +12,10 @@
   transition: 0.5s;
 }
 .news-btn button:hover {
-  background: black;
-  color: white;
+  background-color: black;
+}
+.news-header {
+  text-align: center;
+  color: #0ebcd3;
+  padding: 50px 0;
 }
