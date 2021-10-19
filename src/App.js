@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import AuthProvider, { AuthContext } from "./Context/AuthProvider";
+//auht provider
+import AuthProvider from "./Context/AuthProvider";
+//private route
 import PrivateRoute from "./Context/PrivateRoute/PrivateRoute";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";

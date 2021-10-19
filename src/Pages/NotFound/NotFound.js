@@ -1,5 +1,6 @@
 import React from "react";
 import "./NotFound.css";
+//images not found
 import notFound from "../../images/Error-404.png";
 import { Link } from "react-router-dom";
 const NotFound = () => {

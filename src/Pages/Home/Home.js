@@ -1,10 +1,9 @@
 import React from "react";
+//import banner latestNews,meetdoctor services component
 import Banner from "../Banner/Banner";
 import LatestNews from "../LatestNews/LatestNews";
 import MeetDoctor from "../MeetDoctor/MeetDoctor";
 import Services from "../Services/Services";
-import Footer from "../Shared/Footer/Footer";
-import Header from "../Shared/Header/Header";
 import "./Home.css";
 const Home = () => {
   return (

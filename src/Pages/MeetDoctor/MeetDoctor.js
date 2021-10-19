@@ -1,6 +1,8 @@
 import React from "react";
+//import from react bootstrap
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import "./MeetDoctor.css";
+//all the images
 import doctor1 from "../../images/doctors/doctor2.jpg";
 import doctor2 from "../../images/doctors/doctor3.png";
 import doctor3 from "../../images/doctors/doctor1.png";

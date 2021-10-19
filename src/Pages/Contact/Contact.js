@@ -1,6 +1,8 @@
 import React from "react";
+//import from react bootstrap
 import { Button, Container, Form, Row } from "react-bootstrap";
 import "./Contact.css";
+//images import
 import contactImg from "../../images/contact_us.png";
 const Contact = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+//import from react bootstrap
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./Banner.css";
 

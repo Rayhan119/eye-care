@@ -1,6 +1,8 @@
 import React from "react";
+//import from react bootstrap
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "./About.css";
+//image import
 import healthcare from "../../images/eye-doctor-optometrist-and-ophthalmologist.jpg";
 const About = () => {
   return (

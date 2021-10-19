@@ -1,6 +1,8 @@
+/* login section */
 .login-section {
   padding: 80px 0;
 }
+/* login form section */
 .main-form-section {
   margin: auto;
   background: rgb(243, 243, 243);
@@ -16,6 +18,7 @@
   margin: auto;
   border-radius: 10px;
 }
+/* login form button */
 .login-form-btn {
   text-align: center;
   padding: 20px 0;
@@ -31,12 +34,14 @@
   background: black;
   color: white;
 }
+/* hr section */
 hr {
   padding: 1px;
   width: 45%;
   margin: auto;
   background: crimson;
 }
+/* google sign in part */
 .google-signIn-section {
   text-align: center;
   margin: 40px 0;
@@ -54,6 +59,7 @@ hr {
   width: 25px;
   height: 25px;
 }
+/* toggle part */
 .toggle-link-style a {
   font-size: 18px;
   color: red;

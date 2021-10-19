@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+//import all from firebase Auth
 import {
   getAuth,
   signOut,
@@ -15,13 +15,16 @@ import {
 import FirebaseInitialize from "../Firebase/Firebase.init";
 FirebaseInitialize();
 const useFirebase = () => {
+  //declare auth
   const auth = getAuth();
+  //declare all the useing state and useEffect
   const [users, setUsers] = useState({});
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(true);
   //google sign in
   const handleGoogleSignIn = () => {
     const googleProvider = new GoogleAuthProvider();
@@ -40,7 +43,10 @@ const useFirebase = () => {
     const unsubscribe = onAuthStateChanged(auth, (signedInUser) => {
       if (signedInUser) {
         setUsers(signedInUser);
+      } else {
+        setUsers({});
       }
+      setLoading(false);
     });
     return () => unsubscribe;
   }, []);
@@ -69,7 +75,7 @@ const useFirebase = () => {
         setError(error.message);
       });
   };
-  //Emali and Password
+  //Emali and Password and photo url
   const getEmail = (e) => {
     setEmail(e?.target?.value);
   };
@@ -88,10 +94,7 @@ const useFirebase = () => {
       displayName: name,
       photoURL: image,
     })
-      .then(() => {
-        // Profile updated!
-        // ...
-      })
+      .then(() => {})
       .catch((error) => {
         setError(error.message);
       });
@@ -115,6 +118,7 @@ const useFirebase = () => {
     handleGoogleSignOut,
     users,
     error,
+    loading,
   };
 };
 
