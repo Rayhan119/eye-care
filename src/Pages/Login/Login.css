@@ -1,0 +1,56 @@
+.login-section {
+  padding: 80px 0;
+}
+.main-form-section {
+  margin: auto;
+  background: rgb(243, 243, 243);
+  border-radius: 20px;
+  padding: 30px 0;
+}
+.main-form-section h1 {
+  text-align: center;
+  color: #13c5dd;
+}
+.login-form-section input {
+  width: 25%;
+  margin: auto;
+  border-radius: 10px;
+}
+.login-form-btn {
+  text-align: center;
+  padding: 20px 0;
+}
+.login-form-btn button {
+  background: #0ebcd3;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.login-form-btn button:hover {
+  background: black;
+  color: white;
+}
+hr {
+  padding: 1px;
+  width: 45%;
+  margin: auto;
+  background: crimson;
+}
+.google-signIn-section {
+  text-align: center;
+  margin: 40px 0;
+}
+.google-signIn-section button {
+  background: #0ebcd3ef;
+  border: none;
+  transition: 0.5s;
+}
+.google-signIn-section button:hover {
+  background: black;
+  color: white;
+}
+.google-signIn-section img {
+  width: 25px;
+  height: 25px;
+}

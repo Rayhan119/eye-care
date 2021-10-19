@@ -1,0 +1,28 @@
+.banner-section {
+  background-image: linear-gradient(rgb(61, 56, 56, 0.6), rgb(54, 53, 53, 0.4)),
+    url("../../images/Banner/banner-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+}
+.banner-left-section span {
+  color: #13c5dd;
+  font-weight: bold;
+}
+.banner-left-section p {
+  line-height: 1.7em;
+  text-align: justify;
+  padding: 10px 0;
+}
+.banner-btn button {
+  background: #0ebcd3;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.banner-btn button:hover {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,28 @@
+.about-section {
+  padding: 40px 0;
+}
+.about-section img {
+  width: 100%;
+}
+.about-section p {
+  line-height: 1.5em;
+  padding-top: 20px;
+}
+.about-section h2 {
+  color: maroon;
+}
+.about-btn {
+  text-align: center;
+  padding: 20px 0;
+}
+.about-btn button {
+  background: #0ebcd3;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.about-btn button:hover {
+  background: black;
+  color: white;
+}

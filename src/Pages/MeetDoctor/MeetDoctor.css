@@ -1,0 +1,15 @@
+.doctor-section-header {
+  text-align: center;
+  padding: 60px 0 40px 0;
+}
+.doctor-section-header span {
+  color: #13c5dd;
+}
+.cart {
+  margin: 0 20px;
+}
+
+.cart img {
+  width: 100%;
+  height: 250px;
+}

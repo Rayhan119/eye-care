@@ -1,0 +1,18 @@
+.service-detail-btn {
+  text-align: center;
+  padding: 20px 0;
+}
+.service-detail-btn button {
+  background: #0ebcd3;
+  padding: 8px 30px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.service-detail-btn:hover {
+  background: black;
+  color: white;
+}
+.card img {
+  width: 100%;
+}
