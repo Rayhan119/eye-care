@@ -1,5 +1,5 @@
 <h1>Eye Care Bd</h1>
-<h3>site Link:</h3>
+<h3>site Link:https://eyecarebd.netlify.app/</h3>
 <h3>About the site :</h3>
 <ul>
     <li>Health care related  site</li>
@@ -20,4 +20,10 @@
     <li>Javascripts</li>
     <li>Fontawesome</li>
     <li>Bootstrap5</li>
+</ul>
+<h3>Tools</h3>
+<ul>
+    <li>Netlify</li>
+    <li>Firebase Authentication</li>
+    <li>Vs code</li>
 </ul>

@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from "@testing-library/dom";
 import React from "react";
 import { Button, Container, Form, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
@@ -6,15 +5,8 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./SignUp.css";
 const SignUp = () => {
-  const {
-    users,
-    getName,
-    getImage,
-    signUpEmailPassword,
-    getEmail,
-    getPassword,
-    error,
-  } = useAuth();
+  const { getName, getImage, signUpEmailPassword, getEmail, getPassword } =
+    useAuth();
 
   return (
     <div>

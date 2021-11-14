@@ -3,18 +3,20 @@ import { Button, Container, Form, Row } from "react-bootstrap";
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 import google from "../../images/Google__G__Logo.svg.png";
-import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 const Login = () => {
   const history = useHistory();
   const location = useLocation();
-  const redirect = location?.state?.from;
-  const googleSignIn = () => {
-    handleGoogleSignIn().then((res) => {
-      history.push(redirect);
-    });
-  };
-  const { handleGoogleSignIn, signInEmailPassword, getEmail, getPassword } =
-    useAuth();
+  const redirect = location?.state?.from || "/home";
+
+  const {
+    setUsers,
+    setError,
+    handleGoogleSignIn,
+    signInEmailPassword,
+    getEmail,
+    getPassword,
+  } = useAuth();
   return (
     <div className="login-section">
       <Container>
@@ -22,7 +24,18 @@ const Login = () => {
           <div className="main-form-section shadow p-3 mb-5 bg-body rounded">
             <h1>Please Login</h1>
             <div className="login-form-section">
-              <Form onSubmit={signInEmailPassword}>
+              <Form
+                onSubmit={() => {
+                  signInEmailPassword()
+                    .then((result) => {
+                      setUsers(result.user);
+                      history.push(redirect);
+                    })
+                    .catch((error) => {
+                      setError(error.messege);
+                    });
+                }}
+              >
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                   <Form.Control
                     onBlur={getEmail}
@@ -54,7 +67,18 @@ const Login = () => {
             </div>
 
             <div className="google-signIn-section">
-              <Button onClick={googleSignIn}>
+              <Button
+                onClick={() => {
+                  handleGoogleSignIn()
+                    .then((result) => {
+                      setUsers(result.user);
+                      history.push(redirect);
+                    })
+                    .catch((error) => {
+                      setError(error.messege);
+                    });
+                }}
+              >
                 <img src={google} alt="" /> Google sign In
               </Button>
             </div>

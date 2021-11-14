@@ -67,13 +67,7 @@ const useFirebase = () => {
   //sign In email and password
   const signInEmailPassword = (e) => {
     e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        setUsers(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
+    return signInWithEmailAndPassword(auth, email, password);
   };
   //Emali and Password and photo url
   const getEmail = (e) => {
@@ -116,6 +110,8 @@ const useFirebase = () => {
     signInEmailPassword,
     handleGoogleSignIn,
     handleGoogleSignOut,
+    setUsers,
+    setError,
     users,
     error,
     loading,

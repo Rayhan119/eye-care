@@ -34,6 +34,7 @@ const About = () => {
             <img src={healthcare} alt="" />
           </Col>
         </Row>
+
         <div className="about-btn">
           <Button>Call Now</Button>
         </div>
